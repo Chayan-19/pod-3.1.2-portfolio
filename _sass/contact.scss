@@ -1,11 +1,12 @@
 .contact-box {
-    width: 500px;
-    background-color: #fff;
-    box-shadow: 0 0 20px 0 #999;
+    // width: 500px;
+    // background-color: red;
+    justify-content: center;
+    // box-shadow: 0 0 20px 0 #999;
     top: 50%;
     left: 50%;
-    transform: translate(50%, 50%);
-    position: absolute;
+    // transform: translate(50%, 50%);
+    // position: absolute;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -13,12 +14,13 @@
 
 #fs-frm {
     margin: 35px;
+    width: 500px;
 }
 
 .input-field {
     width: 400px;
     height: 40px;
-    margin-top: 20px;
+    margin-bottom: 15px;
     padding-left: 10px;
     padding-right: 10px;
     border: 1px solid #777;
@@ -31,13 +33,18 @@
     padding-top: 10px;
 }
 
-.btn {
+.btn-submit {
     border-radius: 20px;
     color: #fff;
     margin-top: 18px;
     padding: 10px;
-    background-color: #1d539f !important;
+    background-color: #1d539f;
     font-size: 12px;
     border: none;
     cursor: pointer;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
 }
