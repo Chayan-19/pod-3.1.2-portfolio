@@ -3,7 +3,11 @@
     text-align: center;
     height: 320px;
     margin-bottom: 50px;
-    h1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    h2 {
         font-size: 50px;
         font-weight: 700;
         color: white;
@@ -16,11 +20,14 @@
         margin-left: auto;
         margin-right: auto;
         display: block;        
-        padding: 20px;
     }
     
     .profile-picture {
         margin-bottom: 30px;
         height: 200px;
+    }
+
+    &__bio {
+        max-width: 50%;
     }
 }
