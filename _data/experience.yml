@@ -1,4 +1,4 @@
-- role: Pre Fellowship Fellow
-  company: MLH Fellowship
-  dates: Summer 2021
-  logo: fellowship.svg
+- name: Pre Fellowship Fellow
+  img: fellowship.svg
+  content: bla bla bla
+  view: https://tichnas.github.io/
