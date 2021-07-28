@@ -1,10 +1,19 @@
 <header class="nav-bar">
-    <div class="nav-content">
-        <a href="{{ '/' | relative_url }}">
-            <div class="nav-logo">
-                <img src="./assets/img/logo.svg" />
-            </div>
-        </a>
-        
+  <div class="nav-content">
+    <div class="logo-container">
+        <div class="nav-logo">
+            <a href="{{ '/' | relative_url }}">
+            <img src="./assets/img/logo.svg" />
+        </div>
+      </a>
     </div>
+    <div class="links-container">
+      <a class="nav-item" target="_blank" href="{{ 'https://drive.google.com/file/d/16MsEvf5VTyq2FYVAPQoVZtEpGr6ampF5/view?usp=sharing' }}"> CV </a>
+      <a class="nav-item" href="#projects"> Projects </a>
+      <a class="nav-item" href="#workExperience"> Work Experience </a>
+      <a class="nav-item" href="#education"> Education </a>
+      <a class="nav-item" href="#contact"> Contact Me </a>
+      {% include dark_mode.html %}
+    </div>
+  </div>
 </header>

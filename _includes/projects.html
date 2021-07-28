@@ -1,7 +1,7 @@
-<h2>Projects</h2>
+<h2 id="projects">Projects</h2>
 <div class="card-container">
-    {% for item in site.data.projects %}
-    {% if item.page-name %}
+  {% for item in site.data.projects %}
+  <!-- {% if item.page-name %}
     <a href="/projects/{{ item.page-name }}">
     {% else %}
     <a>
@@ -13,7 +13,24 @@
           <p class="dates">{{ item.date }}</p>
         </div>
       </div>
-    </a>
-    {% endfor %}
+    </a> -->
+  <div class="card">
+    <h3 class="card__name">{{ item.name }}</h3>
+    <div class="card__content">
+      <div class="card__img">
+        <img src="/assets/img/projects/{{ item.img }}" alt="" />
+      </div>
+      <div class="card__hidden">
+        <p class="card__description">{{ item.content }}</p>
+        <div class="card__btn">
+          {% if item.code %}
+          <a href="{{ item.code }}">CODE</a>
+          {% endif %} {% if item.view %}
+          <a href="{{ item.view }}">VIEW</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
   </div>
-  
+  {% endfor %}
+</div>

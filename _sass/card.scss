@@ -1,0 +1,90 @@
+.card {
+  &__name {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  &__content {
+    position: relative;
+    transition: transform 0.5s;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    height: 15rem;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @media (hover: hover) {
+      color: white;
+    }
+  }
+
+  &__content:hover img {
+    opacity: 0.35;
+  }
+
+  &__content:hover &__hidden {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__img {
+    background-color: black;
+    height: 15rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 100%;
+      display: block;
+      transition: opacity 0.5s;
+    }
+  }
+
+  &__hidden {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    transition: opacity 0.5s;
+    padding: 2rem;
+
+    @media (hover: hover) {
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+
+    a {
+      //   background-color: $color-primary;
+      border: none;
+      padding: 0.7rem 1rem;
+      letter-spacing: 2px;
+      border-radius: 0.5rem;
+      //   color: $color-white;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        // background-color: $color-primary-dark;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}

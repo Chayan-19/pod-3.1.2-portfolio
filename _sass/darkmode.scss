@@ -1,0 +1,133 @@
+.toggle-theme-switch {
+  right: 0;
+  position: absolute;
+  top: 0;
+  margin: 6px 35px;
+}
+
+@media only screen and (max-width: 600px) {
+  .toggle-theme-switch {
+    margin-top: -8px;
+    margin-right: 20px;
+  }
+}
+
+#toggle-theme {
+  opacity: 0;
+}
+
+#toggle-label {
+  width: 40px;
+  height: 18px;
+  background-color: #363636;
+  display: flex;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+  position: relative;
+  transform: scale(1.5);
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.fa-sun {
+  color: #f5f5f9;
+}
+
+.fa-moon {
+  color: #70b6ce;
+}
+
+.slider {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  position: absolute;
+  left: 4px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+#toggle-theme:checked + #toggle-label .slider {
+  transform: translateX(18px);
+  background-color: #363636;
+}
+
+#toggle-theme:checked + #toggle-label {
+  background-color: #70b6ce;
+}
+
+.darkmode {
+  --light-text-color: #d4d3d3;
+  --lighter-text-color: #ebebeb;
+  --white-text-color: #fff;
+  --dark-bg-color: #28272b;
+  --dark-card-bg-color: #404040;
+  --dark-header-bg-color: #0f3e80;
+
+  background-color: var(--dark-bg-color) !important;
+  color: var(--lighter-text-color);
+
+  .card {
+    background-color: var(--dark-card-bg-color);
+  }
+
+  .info .dates {
+    color: var(--light-text-color);
+  }
+
+  a {
+    color: var(--white-text-color);
+  }
+
+  .nav-bar {
+    background-color: var(--dark-header-bg-color);
+  }
+
+  .profile {
+    background-color: var(--dark-header-bg-color) !important;
+  }
+
+  .page {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      color: var(--white-text-color);
+    }
+
+    p {
+      color: var(--lighter-text-color);
+    }
+  }
+
+  .modal-title,
+  .close-btn {
+    color: var(--white-text-color);
+  }
+
+  .modal-content {
+    color: var(--lighter-text-color);
+    background-color: var(--dark-card-bg-color);
+  }
+
+  .form {
+    color: var(--white-text-color);
+    background-color: var(--dark-card-bg-color);
+  }
+
+  input,
+  .contact-form:before,
+  textarea,
+  button {
+    color: var(--light-text-color);
+  }
+
+  button:hover {
+    background: var(--dark-bg-color);
+  }
+}
